@@ -74,6 +74,13 @@ function ServiceDetailPlaceholder({ title }: { title: string }) {
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
+useEffect(() => {
+  if (typeof (window as any).gtag === "function") {
+  (window as any).gtag("config", "G-Z8EKPRMN51", {
+      page_path: currentPath,
+    });
+  }
+}, [currentPath]);
 
   useEffect(() => {
     // Simple client-side routing
