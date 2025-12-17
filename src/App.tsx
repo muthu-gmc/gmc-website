@@ -76,7 +76,7 @@ export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 useEffect(() => {
   if (typeof (window as any).gtag === "function") {
-  (window as any).gtag("config", "G-Z8EKPRMN51", {
+  (window as any).gtag("config", "G-CLCHPZ5CRK", {
       page_path: currentPath,
     });
   }
